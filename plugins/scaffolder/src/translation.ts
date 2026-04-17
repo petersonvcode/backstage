@@ -182,6 +182,7 @@ export const scaffolderTranslationRef = createTranslationRef({
       hideLogsButtonTitle: 'Hide Logs',
       showLogsButtonTitle: 'Show Logs',
       contextMenu: {
+        moreOptions: 'More options',
         hideLogs: 'Hide Logs',
         showLogs: 'Show Logs',
         hideButtonBar: 'Hide Button Bar',
@@ -202,6 +203,7 @@ export const scaffolderTranslationRef = createTranslationRef({
         title: 'Title',
         description: 'Description',
         type: 'Type',
+        value: 'Value',
       },
       undefined: 'No schema defined',
     },

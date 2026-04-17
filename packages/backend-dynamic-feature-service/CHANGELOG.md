@@ -1,5 +1,96 @@
 # @backstage/backend-dynamic-feature-service
 
+## 0.8.1
+
+### Patch Changes
+
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+- Updated dependencies
+  - @backstage/backend-plugin-api@1.9.0
+  - @backstage/backend-defaults@0.17.0
+  - @backstage/errors@1.3.0
+  - @backstage/plugin-auth-node@0.7.0
+  - @backstage/plugin-catalog-backend@3.6.0
+  - @backstage/cli-common@0.2.1
+  - @backstage/cli-node@0.3.1
+  - @backstage/config-loader@1.10.10
+  - @backstage/plugin-search-backend-node@1.4.3
+  - @backstage/plugin-scaffolder-node@0.13.2
+  - @backstage/backend-openapi-utils@0.6.8
+  - @backstage/plugin-events-backend@0.6.1
+  - @backstage/plugin-permission-node@0.10.12
+  - @backstage/config@1.3.7
+  - @backstage/plugin-app-node@0.1.44
+  - @backstage/plugin-events-node@0.4.21
+  - @backstage/plugin-permission-common@0.9.8
+  - @backstage/plugin-search-common@1.2.23
+
+## 0.8.1-next.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/errors@1.3.0-next.0
+  - @backstage/plugin-auth-node@0.7.0-next.2
+  - @backstage/plugin-catalog-backend@3.6.0-next.2
+  - @backstage/backend-defaults@0.16.1-next.2
+  - @backstage/cli-common@0.2.1-next.1
+  - @backstage/cli-node@0.3.1-next.1
+  - @backstage/config-loader@1.10.10-next.1
+  - @backstage/plugin-search-backend-node@1.4.3-next.2
+  - @backstage/plugin-scaffolder-node@0.13.2-next.2
+  - @backstage/backend-openapi-utils@0.6.8-next.2
+  - @backstage/backend-plugin-api@1.9.0-next.2
+  - @backstage/config@1.3.7-next.0
+  - @backstage/plugin-events-backend@0.6.1-next.2
+  - @backstage/plugin-events-node@0.4.21-next.2
+  - @backstage/plugin-permission-common@0.9.8-next.0
+  - @backstage/plugin-permission-node@0.10.12-next.2
+  - @backstage/plugin-search-common@1.2.23-next.0
+
+## 0.8.1-next.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/backend-plugin-api@1.9.0-next.1
+  - @backstage/backend-defaults@0.16.1-next.1
+  - @backstage/plugin-catalog-backend@3.5.1-next.1
+  - @backstage/plugin-auth-node@0.7.0-next.1
+  - @backstage/backend-openapi-utils@0.6.8-next.1
+  - @backstage/plugin-app-node@0.1.44-next.1
+  - @backstage/plugin-events-backend@0.6.1-next.1
+  - @backstage/plugin-events-node@0.4.21-next.1
+  - @backstage/plugin-permission-node@0.10.12-next.1
+  - @backstage/plugin-scaffolder-node@0.13.1-next.1
+  - @backstage/plugin-search-backend-node@1.4.3-next.1
+
+## 0.8.1-next.0
+
+### Patch Changes
+
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+- Updated dependencies
+  - @backstage/cli-common@0.2.1-next.0
+  - @backstage/plugin-catalog-backend@3.5.1-next.0
+  - @backstage/backend-defaults@0.16.1-next.0
+  - @backstage/backend-plugin-api@1.8.1-next.0
+  - @backstage/cli-node@0.3.1-next.0
+  - @backstage/config-loader@1.10.10-next.0
+  - @backstage/plugin-auth-node@0.6.15-next.0
+  - @backstage/plugin-events-backend@0.6.1-next.0
+  - @backstage/plugin-permission-node@0.10.12-next.0
+  - @backstage/plugin-search-backend-node@1.4.3-next.0
+  - @backstage/backend-openapi-utils@0.6.8-next.0
+  - @backstage/plugin-app-node@0.1.44-next.0
+  - @backstage/plugin-events-node@0.4.21-next.0
+  - @backstage/plugin-scaffolder-node@0.13.1-next.0
+  - @backstage/config@1.3.6
+  - @backstage/errors@1.2.7
+  - @backstage/types@1.2.2
+  - @backstage/plugin-permission-common@0.9.7
+  - @backstage/plugin-search-common@1.2.22
+
 ## 0.8.0
 
 ### Minor Changes
