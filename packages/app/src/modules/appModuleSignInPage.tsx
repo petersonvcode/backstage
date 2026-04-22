@@ -16,10 +16,41 @@
 
 import { createFrontendModule } from '@backstage/frontend-plugin-api';
 import { SignInPageBlueprint } from '@backstage/plugin-app-react';
-import type { SignInPageProps } from '@backstage/plugin-app-react';
-import { SignInPage, ProxiedSignInPage } from '@backstage/core-components';
-import { microsoftAuthApiRef } from '@backstage/core-plugin-api';
-import appPlugin from '@backstage/plugin-app';
+import { ProxiedSignInPage } from '@backstage/core-components';
+// import { microsoftAuthApiRef } from '@backstage/core-plugin-api';
+
+const signInPage = SignInPageBlueprint.make({
+  params: {
+    loader: async () => props => {
+      // const random = Math.random();
+      // if (random < 0.5)
+      //   return (
+      //     <SignInPage
+      //       {...props}
+      //       providers={[
+      //         'guest',
+      //         {
+      //           id: 'microsoft-auth-provider',
+      //           title: 'Microsoft',
+      //           message: 'Sign In using Microsoft Azure AD',
+      //           apiRef: microsoftAuthApiRef,
+      //         },
+      //       ]}
+      //       title="Select a sign-in method"
+      //       align="center"
+      //     />
+      //   );
+
+      return (
+        <ProxiedSignInPage
+          {...props}
+          provider="awsalb"
+          headers={{ 'X-Requested-With': 'XMLHttpRequest' }}
+        />
+      );
+    },
+  },
+});
 
 /**
  * The default new-frontend sign-in page only enables `guest`. OAuth providers
@@ -30,40 +61,5 @@ import appPlugin from '@backstage/plugin-app';
  */
 export const appModuleSignInPage = createFrontendModule({
   pluginId: 'app',
-  extensions: [
-    //@ts-ignore
-    appPlugin.getExtension('sign-in-page:app').override({
-      factory: () => {
-        const AppSignInPage = (props: SignInPageProps) => (
-          <SignInPage
-            {...props}
-            providers={[
-              'guest',
-              {
-                id: 'microsoft-auth-provider',
-                title: 'Microsoft',
-                message: 'Sign In using Microsoft Azure AD',
-                apiRef: microsoftAuthApiRef,
-              },
-            ]}
-            title="Select a sign-in method"
-            align="center"
-          />
-        );
-        return [SignInPageBlueprint.dataRefs.component(AppSignInPage)];
-      },
-    }),
-  ],
-});
-
-const proxySignInPage = SignInPageBlueprint.make({
-  params: {
-    loader: async () => props =>
-      <ProxiedSignInPage {...props} provider="awsalb" />,
-  },
-});
-
-export const proxiedSignInPage = createFrontendModule({
-  pluginId: 'app',
-  extensions: [proxySignInPage],
+  extensions: [signInPage],
 });

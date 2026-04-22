@@ -41,10 +41,7 @@ import { CatalogImportPage } from '@backstage/plugin-catalog-import';
 import kubernetesPlugin from '@backstage/plugin-kubernetes/alpha';
 import { pluginInfoResolver } from './pluginInfoResolver';
 import { appModuleNav } from './modules/appModuleNav';
-import {
-  appModuleSignInPage,
-  proxiedSignInPage,
-} from './modules/appModuleSignInPage';
+import { appModuleSignInPage } from './modules/appModuleSignInPage';
 import catalogPlugin from '@backstage/plugin-catalog/alpha';
 import InfoIcon from '@material-ui/icons/Info';
 
@@ -126,7 +123,7 @@ const collectedLegacyPlugins = convertLegacyAppRoot(
 
 const app = createApp({
   features: [
-    true ? proxiedSignInPage : appModuleSignInPage,
+    appModuleSignInPage,
     customizedCatalog,
     pagesPlugin,
     // convertedTechdocsPlugin,
