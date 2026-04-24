@@ -7,7 +7,7 @@ set -x
 # SSH_KEY=~/.ssh/hostinger_vps
 # SSH_USER=root
 # SSH_PORT=50022
-BACKEND_IP=54.198.100.98
+BACKEND_IP=54.174.79.32
 SSH_KEY=~/.ssh/backstage-test.pem
 SSH_USER=ec2-user
 SSH_PORT=22
@@ -16,7 +16,7 @@ yarn tsc
 
 yarn build:backend
 
-docker image build . -f packages/backend/Dockerfile --tag backstage --no-cache
+docker image build . -f packages/backend/Dockerfile --tag backstage
 
 docker image save backstage -o backstage.tar
 clean_image_tar() {
